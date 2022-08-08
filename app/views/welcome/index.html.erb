@@ -1,1 +1,20 @@
 <h1>Welcome to Dictionary App!!</h1>
+ <main>
+
+  <div class="card">
+    <h1>Look the definitions</h1>
+    <div class="container p-3 my-3 border">
+      <%= form_tag("/word", method: "post") do %>
+        <%= label_tag(:q, "") %>
+        <span>Pick your dictionary:</span>
+        <%= select_tag "endpoint", options_for_select(["Fictional novels", "non-fictional novels"], "fictional novels") %>
+        <br><br>
+        <%= text_field_tag(:q) %>
+        <br><br>
+        <%= submit_tag("Search") %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</main>

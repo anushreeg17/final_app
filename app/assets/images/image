@@ -1,0 +1,1 @@
+<%= image_tag "book.jpg", height: 300 %>
